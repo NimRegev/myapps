@@ -1,11 +1,11 @@
-apiVersion: codefresh.io/v1beta1
+apiVersion: csdp.codefresh.io/v1
 kind: ApplicationConfiguration
 metadata:
   name: guestbook-ptemplate
 spec:
   applicationSourceSelector:
     matchExpressions:
-    - key: codefresh.io/product
+    - key: app.kubernetes.io/instance
       operator: Exists
   priority: 0
   versionSource:
