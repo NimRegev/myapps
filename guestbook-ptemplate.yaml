@@ -1,5 +1,5 @@
 apiVersion: codefresh.io/v1beta1
-kind: PromotionTemplate
+kind: ApplicationConfiguration
 metadata:
   name: guestbook-ptemplate
 spec:
