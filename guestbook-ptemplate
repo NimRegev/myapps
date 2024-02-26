@@ -1,0 +1,21 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionTemplate
+metadata:
+  name: guestbook-ptemplate
+spec:
+  applicationSourceSelector:
+    matchExpressions:
+    - key: codefresh.io/product
+      operator: Exists
+  priority: 0
+  versionSource:
+    file: Chart.yaml
+    jsonPath: {"$.appVersion"}
+  promotion:
+    Chart.yaml:
+      jsonPaths:
+      - $.appVersion
+      - $.version
+    values.yaml:
+      jsonPaths:
+      - $..image
