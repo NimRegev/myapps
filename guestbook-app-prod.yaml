@@ -4,6 +4,8 @@ metadata:
   name: guestbook-app-prod
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
+  annotations:
+    codefresh.io/product: guestbook
 spec:
   project: default
   source:
