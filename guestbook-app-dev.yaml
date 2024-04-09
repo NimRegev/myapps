@@ -12,7 +12,7 @@ spec:
     targetRevision: master
   destination:
     name: in-cluster
-    namespace: dev
+    namespace: test
   syncPolicy:
     automated:
       prune: true
