@@ -12,10 +12,10 @@ spec:
     targetRevision: master
   destination:
     name: in-cluster
-    namespace: test
+    namespace: dev
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: false
       allowEmpty: false
     syncOptions:
